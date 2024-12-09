@@ -6,6 +6,9 @@ WORKDIR /app
 COPY ./server /app/server
 COPY ./client /app/client
 
+# Instala las dependencias del servidor
+RUN pip install --no-cache-dir -r server/requirements.txt
+
 # Exponer el puerto para el servidor
 EXPOSE 5000
 
